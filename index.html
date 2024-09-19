@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="expense-style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <!-- Form untuk menambah transaksi -->
+        <form id="transaction-form">
+            <input type="text" id="description" placeholder="Enter description" required>
+            <input type="number" id="amount" placeholder="Enter amount" required>
+            <button type="submit" style="margin-top: 1vh;">Add Transaction</button>
+        </form>
+
+        <!-- Daftar transaksi -->
+        <ul id="transaction-list"></ul>
+
+        <!-- Ringkasan saldo -->
+        <div class="summary">
+            <h2>Balance: <span id="balance">0 IDR</span></h2>
+            <div id="chart-container">
+                <canvas id="expense-chart"></canvas>
+            </div>
+        </div>
+
+        <p id="error-message" class="error-message hidden"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
